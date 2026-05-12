@@ -37,8 +37,8 @@ to begin analysis.";
         if (other.CompareTag("Player"))
         {
             playerNear = true;
-            UIManager.Instance.ShowAlert(
-                "Press E to access projector");
+           // UIManager.Instance.ShowAlert(
+             //   "Press E to access projector");
         }
     }
     private void OnTriggerExit(Collider other)
