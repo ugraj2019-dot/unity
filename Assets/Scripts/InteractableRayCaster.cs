@@ -1,46 +1,38 @@
 using UnityEngine;
+
 public class InteractionRaycaster : MonoBehaviour
 {
-    [Header("Interaction Settings")]
-    [SerializeField] private float range = 3f;
-    [SerializeField]
-    private KeyCode interactKey =
-        KeyCode.E;
-    [SerializeField] private LayerMask layerMask = ~0;
-    private void Update()
+    public float range = 5f;
+
+    public LayerMask interactLayers;
+
+    void Update()
     {
         Ray ray = new Ray(
             transform.position,
             transform.forward);
+
         if (Physics.Raycast(
             ray,
             out RaycastHit hit,
             range,
-            layerMask))
+            interactLayers))
         {
-         //   Debug.DrawRay(
-           //     ray.origin,
-             //   ray.direction * range,
-               // Color.green);
-            IInteractable interactable =
-                hit.collider.GetComponent<IInteractable>();
-            if (interactable != null)
+            Debug.Log(
+                "Looking at: " +
+                hit.collider.name);
+
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log(
-                    "Looking at: " +
-                    hit.collider.name);
-                if (Input.GetKeyDown(interactKey))
+                IInteractable interactable =
+                    hit.collider
+                    .GetComponentInParent<IInteractable>();
+
+                if (interactable != null)
                 {
                     interactable.Interact(hit);
                 }
             }
-        }
-        else
-        {
-           // Debug.DrawRay(
-             //   ray.origin,
-               // ray.direction * range,
-                //Color.red);
         }
     }
 }

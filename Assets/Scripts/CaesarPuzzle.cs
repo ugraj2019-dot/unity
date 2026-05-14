@@ -4,43 +4,44 @@ public class CaesarPuzzle :
     MonoBehaviour,
     IInteractable
 {
-    public GameObject panel;
+    public GameObject puzzlePanel;
     public Text cipherText;
     public InputField answerInput;
     public Text resultText;
     string correctAnswer =
-        "HELLO AGENT";
+        "HELLO";
+    void Start()
+    {
+        puzzlePanel.SetActive(false);
+    }
     public void Interact(RaycastHit hit)
     {
-        panel.SetActive(true);
+        Debug.Log("Puzzle Opened");
+        puzzlePanel.SetActive(true);
+        cipherText.text =
+            "Decrypt: KHOOR";
+        resultText.text = "";
         Cursor.lockState =
             CursorLockMode.None;
         Cursor.visible = true;
-        cipherText.text =
-            "Decrypt:\nKHOOR DJHQW";
-        resultText.text = "";
     }
     public void SubmitAnswer()
     {
+        Debug.Log("Submit Pressed");
         string answer =
-            answerInput.text.ToUpper();
+            answerInput.text
+            .ToUpper()
+            .Trim();
+        Debug.Log(answer);
         if (answer == correctAnswer)
         {
             resultText.text =
-                "✅ ACCESS GRANTED";
-            Debug.Log("Puzzle Solved");
+                "CORRECT";
         }
         else
         {
             resultText.text =
-                "❌ WRONG ANSWER";
+                "WRONG";
         }
-    }
-    public void ClosePuzzle()
-    {
-        panel.SetActive(false);
-        Cursor.lockState =
-            CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 }
