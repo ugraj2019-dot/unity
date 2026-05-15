@@ -2,11 +2,8 @@ using UnityEngine;
 public class GameCompleteManager :
     MonoBehaviour
 {
-    public GameObject gameCompletePanel;
-    void Start()
-    {
-        gameCompletePanel.SetActive(false);
-    }
+    public GameObject
+        gameCompletePanel;
     public void ShowGameComplete()
     {
         gameCompletePanel.SetActive(true);
@@ -17,6 +14,11 @@ public class GameCompleteManager :
     }
     public void ExitGame()
     {
-        Application.Quit();
+        Debug.Log("EXIT WORKING");
+        gameCompletePanel.SetActive(false);
+        Cursor.lockState =
+            CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 }
