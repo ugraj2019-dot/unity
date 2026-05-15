@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a5ff0bc28e810eb48bd3fb1bcadbcd23
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Editor/Unity.StartAssets.Editor.asmdef
+  uploadId: 721456

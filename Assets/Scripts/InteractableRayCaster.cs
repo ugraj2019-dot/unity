@@ -28,9 +28,11 @@ public class InteractionRaycaster : MonoBehaviour
                     hit.collider
                     .GetComponentInParent<IInteractable>();
 
+
                 if (interactable != null)
                 {
                     interactable.Interact(hit);
+
                 }
             }
         }

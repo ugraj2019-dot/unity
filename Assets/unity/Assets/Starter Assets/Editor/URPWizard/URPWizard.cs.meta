@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e099514c924ac0543bece11342856ca5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Editor/URPWizard/URPWizard.cs
+  uploadId: 721456

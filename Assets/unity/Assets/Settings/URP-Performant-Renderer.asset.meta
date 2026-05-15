@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a5d6b426a040ada49920cb2746274929
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 336056
+  packageName: TV LED 30"
+  packageVersion: 1.0
+  assetPath: Assets/Settings/URP-Performant-Renderer.asset
+  uploadId: 795400

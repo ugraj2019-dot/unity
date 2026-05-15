@@ -1,47 +1,69 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class CaesarPuzzle :
     MonoBehaviour,
     IInteractable
 {
     public GameObject puzzlePanel;
-    public Text cipherText;
+
     public InputField answerInput;
+
     public Text resultText;
+
     string correctAnswer =
         "HELLO";
-    void Start()
-    {
-        puzzlePanel.SetActive(false);
-    }
+
+    bool isOpen = false;
+
     public void Interact(RaycastHit hit)
     {
-        Debug.Log("Puzzle Opened");
+        if (isOpen) return;
+
+        isOpen = true;
+
         puzzlePanel.SetActive(true);
-        cipherText.text =
-            "Decrypt: KHOOR";
-        resultText.text = "";
+
+        Time.timeScale = 0f;
+
         Cursor.lockState =
             CursorLockMode.None;
+
         Cursor.visible = true;
+
+        resultText.text = "";
     }
+
     public void SubmitAnswer()
     {
-        Debug.Log("Submit Pressed");
         string answer =
             answerInput.text
             .ToUpper()
             .Trim();
-        Debug.Log(answer);
+
         if (answer == correctAnswer)
         {
             resultText.text =
-                "CORRECT";
+                "ACCESS GRANTED";
         }
         else
         {
             resultText.text =
-                "WRONG";
+                "ACCESS DENIED";
         }
+    }
+
+    public void ClosePuzzle()
+    {
+        isOpen = false;
+
+        puzzlePanel.SetActive(false);
+
+        Time.timeScale = 1f;
+
+        Cursor.lockState =
+            CursorLockMode.Locked;
+
+        Cursor.visible = false;
     }
 }

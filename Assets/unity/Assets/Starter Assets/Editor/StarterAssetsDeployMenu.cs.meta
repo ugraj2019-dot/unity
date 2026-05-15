@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fb36fb40bc2058f45a288f220c898a8b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Editor/StarterAssetsDeployMenu.cs
+  uploadId: 721456

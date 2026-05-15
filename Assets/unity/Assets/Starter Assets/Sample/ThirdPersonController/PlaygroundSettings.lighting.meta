@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e9fff305b34a24047a3b3231e79c5e2b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/Sample/ThirdPersonController/PlaygroundSettings.lighting
+  uploadId: 721456

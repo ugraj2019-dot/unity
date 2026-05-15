@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91d48ece957f1a749b38d34d2844515c
+timeCreated: 1484217493
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/Starter Assets/TutorialInfo/Readme.asset
+  uploadId: 721456
